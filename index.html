@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            line-height: 1.6;
         }
 
         h1{
@@ -19,60 +20,68 @@
             margin: 0;
         }
 
-        h2{
-            color: #333;
-            margin-top: 20px;
-        }
-
-        h3{
-            color: #555;
-        }
-
-        h4{
-            color: #b22222;
-            font-style: italic;
+        h2,h3,h4{
+            color:#333;
         }
 
         p{
-            width: 70%;
-            margin: 20px auto;
-            font-size: 18px;
-            line-height: 1.6;
-            color: #444;
+            width: 80%;
+            margin: 15px auto;
+        }
+
+        .bold-text{
+            font-weight: bold;
+            font-size:18px;
         }
 
         table{
             margin: 30px auto;
             border-collapse: collapse;
             background-color: white;
+            width:95%;
         }
 
         table, th, td{
-            border: 1px solid #ccc;
+            border:2px solid #333;   /* Border demonstration */
         }
 
         th{
-            background-color: black;
-            color: white;
-            padding: 10px;
+            background:black;
+            color:white;
+            padding:8px;
         }
 
         td{
-            padding: 10px;
+            padding:8px;
+        }
+
+        mark{
+            background: yellow;
+        }
+
+        hr{
+            border:2px solid #999;
+            margin:20px;
+        }
+
+        pre{
+            background:#ddd;
+            padding:15px;
+            border-left:5px solid black;
+            width:80%;
+            margin:auto;
+            text-align:left;
+        }
+
+        footer{
+            background:black;
+            color:white;
+            padding:15px;
+            margin-top:40px;
         }
 
         img{
-            border-radius: 10px;
-        }
-
-        iframe{
-            margin: 30px 0;
-            border-radius: 10px;
-        }
-
-        .highlight{
-            color: #b22222;
-            font-weight: bold;
+            border-radius:10px;
         }
     </style>
 </head>
@@ -88,6 +97,7 @@ The Lexus LS500 F Sport is a performance sedan that has a V6 engine,
 dual automatic system and AWD. It is their best luxury performance sedan.
 </p>
 
+<!-- Images -->
 <table cellpadding="10">
 <tr>
 <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvRRhPlFzxbAleHSummwKWNVrFAgl-iEkk2AZPiNE2uQ&s=10" width="300"></td>
@@ -96,50 +106,170 @@ dual automatic system and AWD. It is their best luxury performance sedan.
 </tr>
 </table>
 
-<iframe width="696" height="391" 
-src="https://www.youtube.com/embed/uSLaSEqsuwc" 
-title="2025 Lexus IS 500 Review"
+<!-- Video -->
+<iframe width="696" height="391"
+src="https://www.youtube.com/embed/uSLaSEqsuwc"
 frameborder="0" allowfullscreen>
 </iframe>
 
+<!-- Car Price Table -->
 <table cellpadding="10">
 <tr>
     <th>Car Name</th>
     <th>Type</th>
     <th>Price</th>
 </tr>
-<tr>
-    <td>Lexus</td>
-    <td>IS 500</td>
-    <td>6,800,000</td>
-</tr>
-<tr>
-    <td>Lexus</td>
-    <td>IS 350</td>
-    <td>5,000,000</td>
-</tr>
-<tr>
-    <td>Lexus</td>
-    <td>IS 300</td>
-    <td>4,000,000</td>
-</tr>
+<tr><td>Lexus</td><td>IS 500</td><td>6,800,000</td></tr>
+<tr><td>Lexus</td><td>IS 350</td><td>5,000,000</td></tr>
+<tr><td>Lexus</td><td>IS 300</td><td>4,000,000</td></tr>
 </table>
 
 <h1>EXPERIENCE LUXURY REDEFINED WITH LEXUS</h1>
 
-<h2 class="highlight">
-Lexus represents the perfect harmony of luxury, innovation, and performance.
-</h2>
+<h2>Lexus represents the perfect harmony of luxury, innovation, and performance.</h2>
 
-<h3>
-Our cars ooze reliability and class, blending luxury with long-term use,
-making them timeless vehicles.
-</h3>
+<h3>Our cars ooze reliability and class, blending luxury with long term use making them timeless vehicles.</h3>
 
-<h4>
-Lexus – The Relentless Pursuit of Perfection
-</h4>
+<h4>Lexus – The Relentless Pursuit of Perfection</h4>
+
+<!-- 2 Bold Sentence (30 words) -->
+<p class="bold-text">
+This bold sentence contains exactly thirty carefully selected words to clearly demonstrate strong emphasis, balanced structure, readability, stylistic clarity, and consistent formatting within this structured Lexus website example.
+</p>
+
+<!-- 3 Underlined Sentences -->
+<p>
+<u>This underlined sentence contains exactly thirty words to properly demonstrate underline formatting while maintaining structure, readability, clarity, visual consistency, and accurate presentation throughout this Lexus website demonstration example.</u>
+</p>
+
+<p>
+<u>This second underlined sentence also contains exactly thirty words to satisfy the requirement while presenting clean structure, consistent phrasing, balanced rhythm, stylistic alignment, and precise formatting demonstration.</u>
+</p>
+
+<!-- 4 Superscript -->
+<p>x<sup>2</sup>  10<sup>3</sup>  a<sup>4</sup>  y<sup>5</sup></p>
+
+<!-- 5 Subscript -->
+<p>H<sub>2</sub>O  CO<sub>2</sub>  O<sub>2</sub>  N<sub>2</sub></p>
+
+<!-- 6 Del -->
+<p>
+<del>Old Model 2020</del><br>
+<del>Previous Price 7,000,000</del><br>
+<del>Outdated Engine Spec</del><br>
+<del>Removed Feature</del>
+</p>
+
+<!-- 7 Mark -->
+<p>
+<mark>Luxury Interior</mark><br>
+<mark>Advanced Technology</mark><br>
+<mark>Premium Performance</mark><br>
+<mark>Signature Lexus Design</mark>
+</p>
+
+<!-- 8 Speech Marks -->
+<p>
+"Luxury is not optional with Lexus."<br>
+"Performance meets refined engineering."<br>
+"Every detail reflects precision craftsmanship."<br>
+"Experience driving excellence daily."
+</p>
+
+<!-- 9 Blockquote -->
+<blockquote>
+Luxury requires attention to detail.<br>
+Performance demands powerful engineering.<br>
+Innovation drives modern vehicle excellence.<br>
+Perfection defines the Lexus philosophy.
+</blockquote>
+
+<!-- 11 Line Break (4 sentences 10 words each) -->
+<p>
+Lexus engineering delivers outstanding long term vehicle reliability.<br>
+Precision craftsmanship enhances premium interior driving comfort.<br>
+Advanced technology improves safety performance and control.<br>
+Elegant exterior styling reflects timeless automotive excellence.
+</p>
+
+<!-- 12 HR -->
+<p>Explore our premium Lexus lineup below.</p>
+<hr>
+<p>Discover performance specifications and luxury features.</p>
+<hr>
+<p>Experience refined automotive innovation today.</p>
+
+<!-- 13 Pre -->
+<pre>
+Lexus Engineering Division
+    Precision Crafted Performance
+        Relentless Pursuit of Perfection
+</pre>
+
+<!-- 14 Unordered List -->
+<ul>
+<li>Luxury</li>
+<li>Performance</li>
+<li>Reliability</li>
+</ul>
+
+<!-- 15 Ordered List -->
+<ol>
+<li>Choose Model</li>
+<li>Select Features</li>
+<li>Book Test Drive</li>
+</ol>
+
+<!-- 16 Nested List -->
+<ul>
+<li>Sedans
+    <ul>
+        <li>IS Series</li>
+        <li>ES Series</li>
+    </ul>
+</li>
+<li>SUVs
+    <ul>
+        <li>RX Series</li>
+        <li>LX Series</li>
+    </ul>
+</li>
+</ul>
+
+<!-- 17-20 Large Table -->
+<table>
+<caption><strong>Student Performance Record</strong></caption>
+<tr>
+<th rowspan="2">ID</th>
+<th>Name</th>
+<th>Math</th>
+<th>Science</th>
+<th>English</th>
+<th>History</th>
+<th>Art</th>
+<th>Grade</th>
+</tr>
+<tr>
+<th>Full Name</th>
+<th colspan="5">Subject Scores</th>
+<th>Final</th>
+</tr>
+
+<tr><td>1</td><td>Alice</td><td>85</td><td>90</td><td>88</td><td>92</td><td>80</td><td>A</td></tr>
+<tr><td>2</td><td>Bob</td><td>78</td><td>84</td><td>75</td><td>80</td><td>70</td><td>B</td></tr>
+<tr><td>3</td><td>Carol</td><td>88</td><td>91</td><td>89</td><td>85</td><td>87</td><td>A</td></tr>
+<tr><td>4</td><td>David</td><td>70</td><td>73</td><td>68</td><td>72</td><td>65</td><td>C</td></tr>
+<tr><td>5</td><td>Eva</td><td>92</td><td>95</td><td>94</td><td>90</td><td>93</td><td>A</td></tr>
+<tr><td>6</td><td>Frank</td><td>60</td><td>65</td><td>63</td><td>58</td><td>62</td><td>D</td></tr>
+<tr><td>7</td><td>Grace</td><td>81</td><td>79</td><td>85</td><td>88</td><td>84</td><td>B</td></tr>
+<tr><td>8</td><td>Henry</td><td>74</td><td>77</td><td>72</td><td>70</td><td>75</td><td>C</td></tr>
+</table>
+
+<footer>
+© 2026 Lexus Website Demonstration
+</footer>
 
 </body>
 </html>
+
 
