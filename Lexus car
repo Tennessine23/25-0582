@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lexus — Experience Amazing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Josefin+Sans:wght@100;300;400&display=swap" rel="stylesheet"/>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: 'Josefin Sans', sans-serif; color: #e8e0d0; overflow-x: hidden;">
+
+  <!-- NAV -->
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 24px 60px; background: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent);">
+    <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; letter-spacing: 8px; color: #c8a96e;">LEXUS</div>
+    <div style="display: flex; gap: 40px;">
+      <a href="#" style="color: #e8e0d0; text-decoration: none; font-size: 11px; letter-spacing: 3px; font-weight: 300; opacity: 0.8;">MODELS</a>
+      <a href="#" style="color: #e8e0d0; text-decoration: none; font-size: 11px; letter-spacing: 3px; font-weight: 300; opacity: 0.8;">INNOVATION</a>
+      <a href="#" style="color: #e8e0d0; text-decoration: none; font-size: 11px; letter-spacing: 3px; font-weight: 300; opacity: 0.8;">CRAFTSMANSHIP</a>
+      <a href="#" style="color: #c8a96e; text-decoration: none; font-size: 11px; letter-spacing: 3px; font-weight: 400; border-bottom: 1px solid #c8a96e; padding-bottom: 2px;">CONFIGURE</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="position: relative; height: 100vh; display: flex; align-items: flex-end; padding-bottom: 100px; overflow: hidden; background: radial-gradient(ellipse at 60% 50%, #1a1208 0%, #0a0a0a 70%);">
+
+    <!-- Decorative lines -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;">
+      <div style="position: absolute; top: 30%; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(200,169,110,0.15), transparent);"></div>
+      <div style="position: absolute; top: 0; bottom: 0; left: 55%; width: 1px; background: linear-gradient(to bottom, transparent, rgba(200,169,110,0.1), transparent);"></div>
+    </div>
+
+    <!-- Car silhouette placeholder (geometric) -->
+    <div style="position: absolute; right: -40px; bottom: 80px; width: 720px; height: 300px;">
+      <!-- Body -->
+      <div style="position: absolute; bottom: 60px; left: 80px; right: 0; height: 150px; background: linear-gradient(135deg, #1c1c1c 0%, #2a2a2a 40%, #111 100%); border-radius: 80px 20px 10px 10px; box-shadow: -20px 10px 60px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.05);"></div>
+      <!-- Roof -->
+      <div style="position: absolute; bottom: 170px; left: 200px; right: 100px; height: 100px; background: linear-gradient(135deg, #161616, #222); border-radius: 60px 40px 0 0;"></div>
+      <!-- Windshield highlight -->
+      <div style="position: absolute; bottom: 195px; left: 240px; width: 140px; height: 60px; background: linear-gradient(135deg, rgba(200,169,110,0.08), rgba(255,255,255,0.03)); border-radius: 30px 20px 0 0; transform: skewX(-10deg);"></div>
+      <!-- Wheels -->
+      <div style="position: absolute; bottom: 30px; left: 120px; width: 100px; height: 100px; border-radius: 50%; background: radial-gradient(circle, #2a2a2a 30%, #111 60%, #0a0a0a 100%); border: 3px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.9);"></div>
+      <div style="position: absolute; bottom: 30px; left: 120px; width: 100px; height: 100px; border-radius: 50%; border: 6px solid rgba(200,169,110,0.2);"></div>
+      <div style="position: absolute; bottom: 30px; right: 80px; width: 100px; height: 100px; border-radius: 50%; background: radial-gradient(circle, #2a2a2a 30%, #111 60%, #0a0a0a 100%); border: 3px solid #333; box-shadow: 0 0 20px rgba(0,0,0,0.9);"></div>
+      <div style="position: absolute; bottom: 30px; right: 80px; width: 100px; height: 100px; border-radius: 50%; border: 6px solid rgba(200,169,110,0.2);"></div>
+      <!-- Headlight -->
+      <div style="position: absolute; bottom: 130px; left: 82px; width: 50px; height: 8px; background: linear-gradient(to right, #c8a96e, rgba(200,169,110,0.2)); border-radius: 4px; box-shadow: 0 0 20px #c8a96e, 0 0 40px rgba(200,169,110,0.3);"></div>
+      <!-- Ground shadow -->
+      <div style="position: absolute; bottom: 20px; left: 80px; right: 40px; height: 20px; background: radial-gradient(ellipse, rgba(0,0,0,0.8), transparent); border-radius: 50%;"></div>
+    </div>
+
+    <!-- Hero text -->
+    <div style="position: relative; z-index: 10; padding-left: 80px; max-width: 540px;">
+      <p style="font-size: 10px; letter-spacing: 6px; color: #c8a96e; margin: 0 0 20px 0; font-weight: 300;">2025 COLLECTION</p>
+      <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 78px; font-weight: 300; line-height: 1; margin: 0 0 12px 0; color: #f0ead8;">LC 500<span style="display: block; font-size: 22px; letter-spacing: 12px; color: #c8a96e; font-weight: 300; margin-top: 8px;">INSPIRATION AWAITS</span></h1>
+      <p style="font-size: 13px; line-height: 2; color: rgba(232,224,208,0.6); margin: 24px 0 40px 0; letter-spacing: 1px; font-weight: 300; max-width: 400px;">A grand touring coupe that transcends convention. Every detail crafted to perfection — where Japanese artistry meets performance engineering.</p>
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <button style="background: transparent; border: 1px solid #c8a96e; color: #c8a96e; padding: 14px 36px; font-family: 'Josefin Sans', sans-serif; font-size: 10px; letter-spacing: 4px; cursor: pointer; transition: all 0.3s;">EXPLORE NOW</button>
+        <button style="background: #c8a96e; border: none; color: #0a0a0a; padding: 14px 36px; font-family: 'Josefin Sans', sans-serif; font-size: 10px; letter-spacing: 4px; cursor: pointer; font-weight: 400;">BUILD YOURS</button>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); text-align: center;">
+      <p style="font-size: 9px; letter-spacing: 4px; color: rgba(200,169,110,0.5); margin: 0 0 8px 0;">SCROLL</p>
+      <div style="width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(200,169,110,0.5), transparent); margin: 0 auto;"></div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section style="background: #0f0e0c; border-top: 1px solid rgba(200,169,110,0.2); border-bottom: 1px solid rgba(200,169,110,0.2); padding: 48px 80px; display: flex; justify-content: space-around; align-items: center;">
+    <div style="text-align: center;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: #c8a96e; margin: 0; line-height: 1;">471</p>
+      <p style="font-size: 9px; letter-spacing: 4px; color: rgba(232,224,208,0.5); margin: 8px 0 0 0;">HORSEPOWER</p>
+    </div>
+    <div style="width: 1px; height: 60px; background: rgba(200,169,110,0.2);"></div>
+    <div style="text-align: center;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: #c8a96e; margin: 0; line-height: 1;">4.4<span style="font-size: 24px;">s</span></p>
+      <p style="font-size: 9px; letter-spacing: 4px; color: rgba(232,224,208,0.5); margin: 8px 0 0 0;">0–60 MPH</p>
+    </div>
+    <div style="width: 1px; height: 60px; background: rgba(200,169,110,0.2);"></div>
+    <div style="text-align: center;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: #c8a96e; margin: 0; line-height: 1;">168</p>
+      <p style="font-size: 9px; letter-spacing: 4px; color: rgba(232,224,208,0.5); margin: 8px 0 0 0;">TOP SPEED MPH</p>
+    </div>
+    <div style="width: 1px; height: 60px; background: rgba(200,169,110,0.2);"></div>
+    <div style="text-align: center;">
+      <p style="font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: #c8a96e; margin: 0; line-height: 1;">V8</p>
+      <p style="font-size: 9px; letter-spacing: 4px; color: rgba(232,224,208,0.5); margin: 8px 0 0 0;">ENGINE</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section style="padding: 120px 80px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: #060606;">
+
+    <div style="background: #0f0e0c; padding: 60px 48px; border-top: 2px solid #c8a96e;">
+      <p style="font-size: 10px; letter-spacing: 5px; color: #c8a96e; margin: 0 0 20px 0;">01</p>
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin: 0 0 20px 0; color: #f0ead8; line-height: 1.2;">Takumi<br/>Craftsmanship</h3>
+      <p style="font-size: 12px; line-height: 2; color: rgba(232,224,208,0.5); margin: 0; letter-spacing: 0.5px;">Each interior is hand-stitched by master craftspeople with over 60,000 hours of training — a tradition passed through generations.</p>
+    </div>
+
+    <div style="background: #0f0e0c; padding: 60px 48px; border-top: 2px solid rgba(200,169,110,0.3);">
+      <p style="font-size: 10px; letter-spacing: 5px; color: #c8a96e; margin: 0 0 20px 0;">02</p>
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin: 0 0 20px 0; color: #f0ead8; line-height: 1.2;">Kinetic<br/>Performance</h3>
+      <p style="font-size: 12px; line-height: 2; color: rgba(232,224,208,0.5); margin: 0; letter-spacing: 0.5px;">The naturally-aspirated 5.0L V8 engine delivers a symphonic sound profile engineered with the same precision as a concert hall.</p>
+    </div>
+
+    <div style="background: #0f0e0c; padding: 60px 48px; border-top: 2px solid rgba(200,169,110,0.3);">
+      <p style="font-size: 10px; letter-spacing: 5px; color: #c8a96e; margin: 0 0 20px 0;">03</p>
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; margin: 0 0 20px 0; color: #f0ead8; line-height: 1.2;">Omotenashi<br/>Technology</h3>
+      <p style="font-size: 12px; line-height: 2; color: rgba(232,224,208,0.5); margin: 0; letter-spacing: 0.5px;">Anticipatory systems that intuit your needs before you know them — the Japanese philosophy of selfless hospitality, digitized.</p>
+    </div>
+  </section>
+
+  <!-- COLOR SELECTOR -->
+  <section style="padding: 80px; background: #080808; text-align: center;">
+    <p style="font-size: 10px; letter-spacing: 6px; color: #c8a96e; margin: 0 0 16px 0;">CHOOSE YOUR FINISH</p>
+    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; margin: 0 0 48px 0; color: #f0ead8;">Signature Colours</h2>
+    <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+      <div style="text-align: center; cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #3a3a3a, #0d0d0d); border: 2px solid rgba(200,169,110,0.6); margin: 0 auto 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);"></div>
+        <p style="font-size: 9px; letter-spacing: 2px; color: rgba(232,224,208,0.5); margin: 0;">OBSIDIAN</p>
+      </div>
+      <div style="text-align: center; cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #e8e0d0, #a0988a); border: 2px solid rgba(200,169,110,0.2); margin: 0 auto 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);"></div>
+        <p style="font-size: 9px; letter-spacing: 2px; color: rgba(232,224,208,0.5); margin: 0;">PARCHMENT</p>
+      </div>
+      <div style="text-align: center; cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #8a6030, #4a3010); border: 2px solid rgba(200,169,110,0.2); margin: 0 auto 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);"></div>
+        <p style="font-size: 9px; letter-spacing: 2px; color: rgba(232,224,208,0.5); margin: 0;">TERRACOTTA</p>
+      </div>
+      <div style="text-align: center; cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #2a3a4a, #0a1520); border: 2px solid rgba(200,169,110,0.2); margin: 0 auto 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);"></div>
+        <p style="font-size: 9px; letter-spacing: 2px; color: rgba(232,224,208,0.5); margin: 0;">MIDNIGHT INK</p>
+      </div>
+      <div style="text-align: center; cursor: pointer;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #c8a96e, #7a6030); border: 2px solid rgba(200,169,110,0.2); margin: 0 auto 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);"></div>
+        <p style="font-size: 9px; letter-spacing: 2px; color: rgba(232,224,208,0.5); margin: 0;">LIQUID GOLD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #060606; border-top: 1px solid rgba(200,169,110,0.15); padding: 48px 80px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; letter-spacing: 8px; color: #c8a96e;">LEXUS</div>
+    <p style="font-size: 10px; letter-spacing: 2px; color: rgba(232,224,208,0.3); margin: 0;">© 2025 LEXUS. ALL RIGHTS RESERVED.</p>
+    <div style="display: flex; gap: 28px;">
+      <a href="#" style="font-size: 9px; letter-spacing: 3px; color: rgba(232,224,208,0.4); text-decoration: none;">PRIVACY</a>
+      <a href="#" style="font-size: 9px; letter-spacing: 3px; color: rgba(232,224,208,0.4); text-decoration: none;">LEGAL</a>
+      <a href="#" style="font-size: 9px; letter-spacing: 3px; color: rgba(232,224,208,0.4); text-decoration: none;">CONTACT</a>
+    </div>
+  </footer>
+
+</body>
+</html>
