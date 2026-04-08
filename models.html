@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEXUS — Models</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--black:#0a0a0a;--charcoal:#1a1a1a;--graphite:#2e2e2e;--silver:#8a8a8a;--platinum:#c8c8c8;--white:#f5f2ee;--cream:#ede8e0;--gold:#c9a84c;--gold-lt:#e2c97e;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5;}
+    h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.04em;}
+    h1{font-size:clamp(3rem,9vw,8rem);line-height:1;}
+    h2{font-size:clamp(2rem,5vw,3.8rem);}
+    h3{font-size:clamp(1.4rem,3vw,2.2rem);}
+    p{color:var(--platinum);font-size:1.05rem;max-width:68ch;}
+    a{color:inherit;text-decoration:none;}
+    .gold{color:var(--gold);}
+    .container{max-width:1280px;margin:0 auto;padding:0 40px;}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:22px 48px;background:rgba(10,10,10,.97);border-bottom:1px solid rgba(201,168,76,.15);}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;letter-spacing:.25em;}
+    .nav-logo span{color:var(--gold);}
+    .nav-links{display:flex;list-style:none;gap:40px;}
+    .nav-links li a{font-family:'Barlow Condensed',sans-serif;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--platinum);transition:color .25s;padding-bottom:2px;border-bottom:1px solid transparent;}
+    .nav-links li a:hover,.nav-links li a.active{color:var(--gold);border-bottom-color:var(--gold);}
+
+    .btn{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;border:1px solid var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:transparent;cursor:pointer;transition:all .3s;}
+    .btn:hover{background:var(--gold);color:var(--black);}
+
+    section{padding:100px 0;}
+    .section-label{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+    .section-label::before{content:'';width:32px;height:1px;background:var(--gold);}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+    .divider{width:64px;height:1px;background:var(--gold);margin:32px 0;}
+
+    .page-banner{height:40vh;min-height:320px;display:flex;align-items:flex-end;padding-bottom:60px;position:relative;overflow:hidden;margin-top:80px;}
+    .page-banner .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.4) saturate(.6);}
+    .page-banner .overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--black) 0%,transparent 60%);}
+    .page-banner .content{position:relative;z-index:2;}
+
+    .table-wrap{overflow-x:auto;margin:40px 0;border:1px solid rgba(201,168,76,.15);}
+    table{width:100%;border-collapse:collapse;font-size:.9rem;}
+    thead tr{background:linear-gradient(90deg,var(--charcoal),var(--graphite));}
+    thead th{padding:16px 20px;text-align:left;font-family:'Barlow Condensed',sans-serif;letter-spacing:.15em;text-transform:uppercase;font-size:.78rem;color:var(--gold);border-bottom:2px solid var(--gold);font-weight:400;}
+    tbody tr{border-bottom:1px solid rgba(255,255,255,.05);transition:background .2s;}
+    tbody tr:hover{background:rgba(201,168,76,.05);}
+    tbody td{padding:14px 20px;color:var(--platinum);}
+    tbody td:first-child{color:var(--white);font-weight:500;}
+    tfoot tr{background:var(--graphite);}
+    tfoot td{padding:14px 20px;color:var(--gold);font-family:'Barlow Condensed',sans-serif;letter-spacing:.1em;}
+
+    .luxury-list{list-style:none;padding:0;}
+    .luxury-list>li{border-left:2px solid var(--gold);padding:20px 28px;margin-bottom:4px;background:rgba(201,168,76,.04);transition:background .3s;}
+    .luxury-list>li:hover{background:rgba(201,168,76,.08);}
+    .luxury-list>li>.list-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:8px;}
+    .luxury-list ul{list-style:none;padding-left:20px;margin-top:10px;}
+    .luxury-list ul li{color:var(--silver);font-size:.9rem;padding:4px 0;padding-left:16px;position:relative;}
+    .luxury-list ul li::before{content:'—';position:absolute;left:0;color:var(--gold);}
+
+    .lead-para{font-size:1.2rem;color:var(--platinum);line-height:1.9;border-left:3px solid var(--gold);padding-left:28px;}
+    .body-para{font-size:1rem;color:var(--silver);line-height:1.85;}
+
+    .model-card{position:relative;overflow:hidden;border:1px solid rgba(201,168,76,.1);aspect-ratio:4/3;}
+    .model-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;filter:brightness(.7);}
+    .model-card:hover img{transform:scale(1.08);filter:brightness(.5);}
+    .model-card-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;background:linear-gradient(to top,rgba(0,0,0,.85) 30%,transparent);}
+    .model-price{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+    .model-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--white);}
+    .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+
+    footer{background:var(--charcoal);border-top:1px solid rgba(201,168,76,.15);padding:64px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+    .footer-brand p{color:var(--silver);font-size:.9rem;margin-top:16px;}
+    .footer-col h5{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:400;}
+    .footer-col ul{list-style:none;}
+    .footer-col ul li{margin-bottom:10px;}
+    .footer-col ul li a{color:var(--silver);font-size:.9rem;transition:color .25s;}
+    .footer-col ul li a:hover{color:var(--gold);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;justify-content:space-between;align-items:center;}
+    .footer-bottom p{font-size:.8rem;color:var(--silver);max-width:none;}
+
+    ::-webkit-scrollbar{width:6px;}
+    ::-webkit-scrollbar-track{background:var(--black);}
+    ::-webkit-scrollbar-thumb{background:var(--graphite);border-radius:3px;}
+    ::-webkit-scrollbar-thumb:hover{background:var(--gold);}
+
+    @media(max-width:900px){
+      .two-col,.three-col{grid-template-columns:1fr;gap:40px;}
+      .footer-grid{grid-template-columns:1fr 1fr;}
+      .nav-links{gap:20px;}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">LEX<span>U</span>S</div>
+  <ul class="nav-links">
+    <li><a href="lexus-home.html">Home</a></li>
+    <li><a href="lexus-models.html" class="active">Models</a></li>
+    <li><a href="lexus-gallery.html">Gallery</a></li>
+    <li><a href="lexus-about.html">About</a></li>
+    <li><a href="lexus-contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-banner">
+  <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=1400&q=80');"></div>
+  <div class="overlay"></div>
+  <div class="content container">
+    <div class="section-label">2025 / 2026 Lineup</div>
+    <h1>Our <span class="gold">Models</span></h1>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <p class="lead-para" style="margin-bottom:64px;max-width:60ch;">From the thundering IS 500 F Sport to the serene LS flagship, every model in the Lexus lineup is a complete expression of a distinct character — united by an obsession with quality.</p>
+
+    <!-- PRICING TABLE -->
+    <div class="section-label">Pricing Overview</div>
+    <h3 style="margin-bottom:8px;">2025 / 2026 <span class="gold">Model Pricing</span></h3>
+    <div class="divider"></div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>Category</th><th>Fuel Type</th><th>Starting Price (KSh)</th><th>Availability</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>IS 300</td><td>Sport Sedan</td><td>Petrol</td><td>4,000,000</td><td>In Stock</td></tr>
+          <tr><td>IS 350</td><td>Sport Sedan</td><td>Petrol</td><td>5,000,000</td><td>In Stock</td></tr>
+          <tr><td>IS 500 F Sport</td><td>Sport Sedan</td><td>Petrol</td><td>6,800,000</td><td>Order Now</td></tr>
+          <tr><td>ES 300h</td><td>Executive Sedan</td><td>Hybrid</td><td>5,500,000</td><td>In Stock</td></tr>
+          <tr><td>LS 500</td><td>Flagship Sedan</td><td>Petrol</td><td>7,500,000</td><td>Order Now</td></tr>
+          <tr><td>RX 350</td><td>Luxury SUV</td><td>Petrol</td><td>6,000,000</td><td>In Stock</td></tr>
+          <tr><td>RX 450h</td><td>Luxury SUV</td><td>Hybrid</td><td>6,800,000</td><td>Limited</td></tr>
+          <tr><td>GX 460</td><td>Off-road SUV</td><td>Petrol</td><td>8,200,000</td><td>In Stock</td></tr>
+          <tr><td>LX 600</td><td>Ultra Luxury SUV</td><td>Petrol</td><td>12,000,000</td><td>Order Now</td></tr>
+          <tr><td>LC 500</td><td>Grand Tourer</td><td>Petrol</td><td>10,500,000</td><td>Order Now</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="3">All prices are indicative. Contact your dealer for final pricing.</td><td colspan="2">Prices in Kenyan Shillings (KSh)</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- SPECS TABLE -->
+    <div class="section-label" style="margin-top:80px;">Technical Data</div>
+    <h3 style="margin-bottom:8px;">Full <span class="gold">Specifications</span></h3>
+    <div class="divider"></div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>Engine</th><th>Displacement</th><th>Horsepower</th><th>Torque (Nm)</th><th>Drivetrain</th><th>0–100 km/h</th><th>Top Speed</th><th>Transmission</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>IS 300</td><td>Inline-4 Turbo</td><td>2.0L</td><td>241 HP</td><td>350</td><td>RWD</td><td>6.5s</td><td>230 km/h</td><td>8-Speed Auto</td></tr>
+          <tr><td>IS 350</td><td>V6</td><td>3.5L</td><td>311 HP</td><td>380</td><td>AWD</td><td>5.6s</td><td>240 km/h</td><td>6-Speed Auto</td></tr>
+          <tr><td>IS 500 F Sport</td><td>V8</td><td>5.0L</td><td>472 HP</td><td>535</td><td>RWD</td><td>4.5s</td><td>270 km/h</td><td>8-Speed Auto</td></tr>
+          <tr><td>ES 300h</td><td>Hybrid I4</td><td>2.5L</td><td>215 HP</td><td>221</td><td>FWD</td><td>8.9s</td><td>180 km/h</td><td>e-CVT</td></tr>
+          <tr><td>LS 500</td><td>Twin Turbo V6</td><td>3.5L</td><td>416 HP</td><td>600</td><td>AWD</td><td>4.6s</td><td>250 km/h</td><td>10-Speed Auto</td></tr>
+          <tr><td>RX 350</td><td>Inline-4 Turbo</td><td>2.4L</td><td>275 HP</td><td>430</td><td>AWD</td><td>6.6s</td><td>200 km/h</td><td>8-Speed Auto</td></tr>
+          <tr><td>GX 460</td><td>V6</td><td>3.5L</td><td>349 HP</td><td>500</td><td>4WD</td><td>7.4s</td><td>195 km/h</td><td>8-Speed Auto</td></tr>
+          <tr><td>LX 600</td><td>Twin Turbo V6</td><td>3.5L</td><td>409 HP</td><td>650</td><td>4WD</td><td>5.9s</td><td>220 km/h</td><td>10-Speed Auto</td></tr>
+          <tr><td>LC 500</td><td>V8</td><td>5.0L</td><td>471 HP</td><td>540</td><td>RWD</td><td>4.4s</td><td>270 km/h</td><td>10-Speed Auto</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="5">Performance figures are manufacturer estimates. Actual results may vary.</td><td colspan="4">F Sport = Performance-tuned suspension &amp; brakes</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- FEATURES + MODELS -->
+    <div style="margin-top:80px;" class="two-col">
+      <div>
+        <div class="section-label">Standard Features</div>
+        <h3>What Every Lexus <span class="gold">Includes</span></h3>
+        <div class="divider"></div>
+        <ul class="luxury-list">
+          <li>
+            <div class="list-title">Safety Suite</div>
+            <ul>
+              <li>Pre-Collision System with Pedestrian Detection</li>
+              <li>Lane Departure Alert with Steering Assist</li>
+              <li>Radar Cruise Control</li>
+              <li>Automatic High Beam</li>
+            </ul>
+          </li>
+          <li>
+            <div class="list-title">Luxury Interior</div>
+            <ul>
+              <li>Hand-stitched NuLuxe or genuine leather seats</li>
+              <li>Panoramic moonroof with power shade</li>
+              <li>Heated &amp; ventilated front seats</li>
+              <li>Ambient lighting with 64 color options</li>
+            </ul>
+          </li>
+          <li>
+            <div class="list-title">Infotainment</div>
+            <ul>
+              <li>14-inch touchscreen with haptic feedback</li>
+              <li>Mark Levinson Premium Audio (12–17 speakers)</li>
+              <li>Wireless Apple CarPlay &amp; Android Auto</li>
+            </ul>
+          </li>
+          <li>
+            <div class="list-title">Convenience</div>
+            <ul>
+              <li>Remote Engine Start via Lexus app</li>
+              <li>Smart Key with push-button start</li>
+              <li>Power-folding, auto-dimming mirrors</li>
+            </ul>
+          </li>
+          <li>
+            <div class="list-title">Warranty &amp; Service</div>
+            <ul>
+              <li>4-year / 80,000 km manufacturer warranty</li>
+              <li>Complimentary first three services</li>
+              <li>24/7 Lexus roadside assistance</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Explore the Range</div>
+        <h3>Chosen by <span class="gold">Character</span></h3>
+        <div class="divider"></div>
+        <div class="three-col" style="gap:16px;">
+          <div class="model-card" style="aspect-ratio:3/2;">
+            <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=400&q=80" alt="LS 500">
+            <div class="model-card-overlay" style="padding:16px;"><div class="model-name" style="font-size:1.2rem;">LS 500</div></div>
+          </div>
+          <div class="model-card" style="aspect-ratio:3/2;">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&q=80" alt="IS 500">
+            <div class="model-card-overlay" style="padding:16px;"><div class="model-name" style="font-size:1.2rem;">IS 500</div></div>
+          </div>
+          <div class="model-card" style="aspect-ratio:3/2;">
+            <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=400&q=80" alt="LX 600">
+            <div class="model-card-overlay" style="padding:16px;"><div class="model-name" style="font-size:1.2rem;">LX 600</div></div>
+          </div>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <p class="body-para">Whether you seek the understated authority of the LS 500, the visceral thrill of the IS 500 F Sport, or the commanding presence of the LX 600, there is a Lexus that reflects exactly who you are.</p>
+          <br>
+          <a href="lexus-contact.html" class="btn" style="margin-top:8px;">Book a Test Drive</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="font-size:1.6rem;">LEX<span>U</span>S</div>
+        <p>The relentless pursuit of perfection. Since 1989, a marque defined by craft, precision, and uncompromising luxury.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Models</h5>
+        <ul>
+          <li><a href="lexus-models.html">IS Series</a></li>
+          <li><a href="lexus-models.html">ES Series</a></li>
+          <li><a href="lexus-models.html">LS Flagship</a></li>
+          <li><a href="lexus-models.html">RX / GX / LX</a></li>
+          <li><a href="lexus-models.html">LC Grand Tourer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Experience</h5>
+        <ul>
+          <li><a href="lexus-gallery.html">Gallery</a></li>
+          <li><a href="lexus-about.html">Heritage</a></li>
+          <li><a href="lexus-contact.html">Test Drive</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="lexus-contact.html">Contact Us</a></li>
+          <li><a href="#">Find a Dealer</a></li>
+          <li><a href="#">Nairobi Showroom</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Lexus — All Rights Reserved.</p>
+      <p style="color:var(--gold);">The Pursuit of Perfection</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
 
