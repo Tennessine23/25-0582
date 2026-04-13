@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LEXUS — Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --black:#0a0a0a; --charcoal:#1a1a1a; --graphite:#2e2e2e;
       --silver:#8a8a8a; --platinum:#c8c8c8; --white:#f5f2ee;
-      --cream:#ede8e0; --gold:#c9a84c; --gold-lt:#e2c97e; --red:#b22222;
+      --cream:#ede8e0; --gold:#c9a84c; --gold-lt:#e2c97e;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{background:var(--black);color:var(--white);font-family:'Barlow',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;}
-    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5;}
+
     h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.04em;}
     h1{font-size:clamp(3rem,9vw,8rem);line-height:1;}
     h2{font-size:clamp(2rem,5vw,3.8rem);}
@@ -37,7 +38,6 @@
     .hero-content{position:relative;z-index:2;padding-left:80px;}
     .hero-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:16px;}
     .hero-eyebrow::before{content:'';width:48px;height:1px;background:var(--gold);}
-    .hero h1{color:var(--white);margin-bottom:20px;}
     .hero-sub{font-size:1.25rem;color:var(--platinum);margin-bottom:48px;font-weight:300;}
 
     .btn{display:inline-flex;align-items:center;gap:12px;padding:16px 40px;border:1px solid var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:transparent;cursor:pointer;transition:all .3s;}
@@ -58,8 +58,6 @@
     .spec-label{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);}
 
     .highlight-para{background:rgba(201,168,76,.07);border:1px solid rgba(201,168,76,.2);padding:28px 36px;font-style:italic;color:var(--platinum);font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.8;}
-    .lead-para{font-size:1.2rem;color:var(--platinum);line-height:1.9;border-left:3px solid var(--gold);padding-left:28px;}
-    .body-para{font-size:1rem;color:var(--silver);line-height:1.85;}
 
     .model-card{position:relative;overflow:hidden;border:1px solid rgba(201,168,76,.1);aspect-ratio:4/3;}
     .model-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;filter:brightness(.7);}
@@ -67,11 +65,6 @@
     .model-card-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;background:linear-gradient(to top,rgba(0,0,0,.85) 30%,transparent);}
     .model-price{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
     .model-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--white);}
-
-    .testimonial{background:var(--charcoal);border:1px solid rgba(201,168,76,.12);padding:48px;position:relative;}
-    .testimonial::before{content:'"';position:absolute;top:-20px;left:40px;font-family:'Cormorant Garamond',serif;font-size:10rem;color:var(--gold);opacity:.15;line-height:1;}
-    .testimonial-text{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--white);line-height:1.7;margin-bottom:24px;}
-    .testimonial-author{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
 
     footer{background:var(--charcoal);border-top:1px solid rgba(201,168,76,.15);padding:64px 0 32px;}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
@@ -84,18 +77,6 @@
     .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;justify-content:space-between;align-items:center;}
     .footer-bottom p{font-size:.8rem;color:var(--silver);max-width:none;}
 
-    @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-    .fade-up{animation:fadeUp .7s ease forwards;}
-    .fade-up.d1{animation-delay:.1s;opacity:0;}
-    .fade-up.d2{animation-delay:.25s;opacity:0;}
-    .fade-up.d3{animation-delay:.4s;opacity:0;}
-    .fade-up.d4{animation-delay:.55s;opacity:0;}
-
-    ::-webkit-scrollbar{width:6px;}
-    ::-webkit-scrollbar-track{background:var(--black);}
-    ::-webkit-scrollbar-thumb{background:var(--graphite);border-radius:3px;}
-    ::-webkit-scrollbar-thumb:hover{background:var(--gold);}
-
     @media(max-width:900px){
       .two-col{grid-template-columns:1fr;gap:40px;}
       .three-col{grid-template-columns:1fr;}
@@ -106,10 +87,10 @@
     }
   </style>
 </head>
+
 <body>
-  
+
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">LEXUS</a>
   <div class="nav-logo">LEX<span>U</span>S</div>
   <ul class="nav-links">
     <li><a href="lexus-index.html" class="active">Home</a></li>
@@ -119,21 +100,19 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content container">
-    <div class="hero-eyebrow fade-up d1">2025 / 2026 Collection</div>
-    <h1 class="fade-up d2">Pursuit<br>of<br><span class="gold">Perfection</span></h1>
-    <p class="hero-sub fade-up d3">Where engineering meets artistry. Every Lexus is a testament<br>to the relentless pursuit of the extraordinary.</p>
-    <div style="display:flex;gap:16px;" class="fade-up d4">
+    <div class="hero-eyebrow">2025 / 2026 Collection</div>
+    <h1>Pursuit<br>of<br><span class="gold">Perfection</span></h1>
+    <p class="hero-sub">Where engineering meets artistry. Every Lexus is a testament<br>to the relentless pursuit of the extraordinary.</p>
+    <div style="display:flex;gap:16px;">
       <a href="lexus-models.html" class="btn btn-solid">Explore Models</a>
       <a href="lexus-gallery.html" class="btn">View Gallery</a>
     </div>
   </div>
 </div>
 
-<!-- PHILOSOPHY -->
 <section>
   <div class="container">
     <div class="two-col">
@@ -141,86 +120,80 @@
         <div class="section-label">Our Philosophy</div>
         <h2>Crafted for Those Who <span class="gold">Demand More</span></h2>
         <div class="divider"></div>
-        <p class="lead-para">Lexus was born from an audacious challenge — to create the finest automobile ever built. Since 1989, we have done exactly that, model after model, year after year.</p>
+        <p style="font-size:1.2rem;line-height:1.9;border-left:3px solid var(--gold);padding-left:28px;">
+          Lexus was born from an audacious challenge — to create the finest automobile ever built.
+          Since 1989, we have done exactly that, model after model.
+        </p>
         <br>
-        <p class="body-para">Every stitch in our leather interiors, every line on our bodywork, and every algorithm in our hybrid systems reflects an uncompromising devotion to quality. Lexus is not simply a car — it is a statement of intent, a declaration of your standards.</p>
-        <br><br>
-        <a href="lexus-about.html" class="btn">Our Heritage</a>
+        <p style="color:var(--silver);line-height:1.85;">
+          Every stitch in our leather interiors, every line on our bodywork, and every algorithm in our hybrid systems
+          reflects an uncompromising devotion to quality.
+        </p>
       </div>
+
       <div>
-        <div style="position:relative;">
-          <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=700&q=80" alt="Lexus craftsmanship" style="width:100%;display:block;filter:brightness(.85) saturate(.9);">
-          <div style="position:absolute;bottom:-20px;right:-20px;width:60%;background:var(--charcoal);border:1px solid rgba(201,168,76,.2);padding:24px;">
-            <div class="section-label" style="font-size:.65rem;">Est. 1989</div>
-            <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--white);">35 Years of<br><span class="gold">Excellence</span></div>
-          </div>
-        </div>
+        <img src="https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=700&q=80"
+             alt="Lexus craftsmanship"
+             style="width:100%;display:block;filter:brightness(.85) saturate(.9);border:1px solid rgba(201,168,76,.15);">
       </div>
     </div>
   </div>
 </section>
 
-<!-- SPECS -->
 <section style="padding:0 0 100px;">
   <div class="container">
     <div class="spec-grid">
       <div class="spec-item"><div class="spec-number">472</div><div class="spec-label">Max Horsepower</div></div>
-      <div class="spec-item"><div class="spec-number">3.4<span style="font-size:1.8rem">s</span></div><div class="spec-label">0–100 km/h</div></div>
+      <div class="spec-item"><div class="spec-number">3.4s</div><div class="spec-label">0–100 km/h</div></div>
       <div class="spec-item"><div class="spec-number">12</div><div class="spec-label">Model Lines</div></div>
       <div class="spec-item"><div class="spec-number">70+</div><div class="spec-label">Countries Worldwide</div></div>
     </div>
   </div>
 </section>
 
-<!-- QUOTE -->
 <section style="padding:0 0 100px;">
   <div class="container">
-    <div class="highlight-para">"Luxury is not a privilege — it is the natural reward for those who demand nothing less than mastery. At Lexus, every vehicle is a promise: that perfection is possible, and that it is worth pursuing."</div>
+    <div class="highlight-para">
+      "Luxury is not a privilege — it is the natural reward for those who demand nothing less than mastery.
+      At Lexus, every vehicle is a promise: that perfection is possible."
+    </div>
   </div>
 </section>
 
-<!-- FEATURED MODELS -->
 <section style="padding:0 0 100px;">
   <div class="container">
     <div class="section-label">Featured Collection</div>
     <h2>Iconic <span class="gold">Models</span></h2>
     <div class="divider"></div>
+
     <div class="three-col" style="margin-top:48px;">
       <div class="model-card">
         <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=600&q=80" alt="Lexus LS 500">
-        <div class="model-card-overlay"><div class="model-price">From KSh 7,500,000</div><div class="model-name">LS 500</div></div>
+        <div class="model-card-overlay">
+          <div class="model-price">From KSh 7,500,000</div>
+          <div class="model-name">LS 500</div>
+        </div>
       </div>
+
       <div class="model-card">
         <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80" alt="Lexus IS 500">
-        <div class="model-card-overlay"><div class="model-price">From KSh 6,800,000</div><div class="model-name">IS 500</div></div>
+        <div class="model-card-overlay">
+          <div class="model-price">From KSh 6,800,000</div>
+          <div class="model-name">IS 500</div>
+        </div>
       </div>
+
       <div class="model-card">
         <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=600&q=80" alt="Lexus LX 600">
-        <div class="model-card-overlay"><div class="model-price">From KSh 12,000,000</div><div class="model-name">LX 600</div></div>
+        <div class="model-card-overlay">
+          <div class="model-price">From KSh 12,000,000</div>
+          <div class="model-name">LX 600</div>
+        </div>
       </div>
     </div>
+
     <div style="text-align:center;margin-top:48px;">
       <a href="lexus-models.html" class="btn">View All Models</a>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section style="padding:0 0 100px;">
-  <div class="container">
-    <div class="two-col">
-      <div class="testimonial">
-        <div class="testimonial-text">Driving a Lexus is an exercise in controlled exhilaration. Every surface, every response, every moment behind the wheel confirms you made the right choice.</div>
-        <div class="testimonial-author">— James Kariuki, Nairobi</div>
-      </div>
-      <div>
-        <div class="section-label">Ownership Experience</div>
-        <h3>A Relationship That <span class="gold">Transcends</span> the Drive</h3>
-        <div class="divider"></div>
-        <p class="body-para">Lexus ownership is a holistic experience. From the moment you visit a showroom, you are immersed in an ethos of omotenashi — the Japanese art of wholehearted hospitality. Our service advisors, technicians, and concierge teams exist for one purpose only: your complete satisfaction.</p>
-        <br>
-        <p class="body-para">Every service appointment is a demonstration of respect for your time. Every detail — from the white-gloved handover to the complimentary vehicle health report — is designed to reinforce your confidence in your investment.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -230,8 +203,9 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="nav-logo" style="font-size:1.6rem;">LEX<span>U</span>S</div>
-        <p>The relentless pursuit of perfection. Since 1989, a marque defined by craft, precision, and uncompromising luxury.</p>
+        <p>The relentless pursuit of perfection. Since 1989, defined by craft, precision, and uncompromising luxury.</p>
       </div>
+
       <div class="footer-col">
         <h5>Models</h5>
         <ul>
@@ -242,26 +216,29 @@
           <li><a href="lexus-models.html">LC Grand Tourer</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <h5>Experience</h5>
         <ul>
           <li><a href="lexus-gallery.html">Gallery</a></li>
-          <li><a href="#">Test Drive</a></li>
-          <li><a href="#">Omotenashi</a></li>
+          <li><a href="lexus-contact.html">Test Drive</a></li>
+          <li><a href="lexus-gallery.html">Omotenashi</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <h5>Connect</h5>
         <ul>
           <li><a href="lexus-contact.html">Contact Us</a></li>
-          <li><a href="#">Find a Dealer</a></li>
-          <li><a href="#">Nairobi Showroom</a></li>
-          <li><a href="#">Mombasa Showroom</a></li>
+          <li><a href="lexus-contact.html">Find a Dealer</a></li>
+          <li><a href="lexus-contact.html">Nairobi Showroom</a></li>
+          <li><a href="lexus-contact.html">Mombasa Showroom</a></li>
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© 2026 Lexus — All Rights Reserved. Prices are indicative and subject to change.</p>
+      <p>© 2026 Lexus — All Rights Reserved.</p>
       <p style="color:var(--gold);">The Pursuit of Perfection</p>
     </div>
   </div>
@@ -272,5 +249,6 @@
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
   });
 </script>
+
 </body>
 </html>
